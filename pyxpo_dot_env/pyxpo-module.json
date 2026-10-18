@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "nativeContract": 1,
+  "name": "dot-env",
+  "native": "Env",
+  "build": { "hook": "pyxpo_dot_env.build:configure" }
+}
