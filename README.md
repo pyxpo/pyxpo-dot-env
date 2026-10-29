@@ -1,5 +1,7 @@
 # pyxpo-dot-env
 
+[![CI](https://github.com/pyxpo/pyxpo-dot-env/actions/workflows/ci.yml/badge.svg)](https://github.com/pyxpo/pyxpo-dot-env/actions/workflows/ci.yml) [![PyPI](https://img.shields.io/pypi/v/pyxpo-dot-env)](https://pypi.org/project/pyxpo-dot-env/) [![Python](https://img.shields.io/pypi/pyversions/pyxpo-dot-env)](https://pypi.org/project/pyxpo-dot-env/) [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+
 Environment variables for [pyxpo](https://github.com/pyxpo/pyxpo) apps. Put settings such as API URLs, feature
 flags and keys in `.env` files, one set per build mode (development, staging, production). Read them in the app
 with typed getters. The build stops when something that looks like a server secret would ship inside the app.
