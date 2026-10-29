@@ -22,7 +22,7 @@ GITIGNORE = ["# pyxpo-dot-env: machine-only env files and dotenvx keys", ".env*.
 STARTER = """\
 # Values for every build mode. Commit this file only if it holds no secrets.
 # PYXPO_PUBLIC_ variables ship inside the app (anyone can read them); other variables stay on the build machine.
-# Put machine secrets in .env.local (git-ignored). Docs: https://github.com/pyxpo/pyxpo/tree/main/packages/env
+# Put machine secrets in .env.local (git-ignored). Docs: https://github.com/pyxpo/pyxpo-dot-env
 
 PYXPO_PUBLIC_API_URL=http://localhost:8000
 """

@@ -5,7 +5,7 @@ flags and keys in `.env` files, one set per build mode (development, staging, pr
 with typed getters. The build stops when something that looks like a server secret would ship inside the app.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/pyxpo/pyxpo/main/packages/dot-env/docs/images/hero.png" width="820" alt="The pyxpo-dot-env demo app: a staging build on Android and a production build on iOS, each with its own API URL, retries, feature flag and locales">
+  <img src="https://raw.githubusercontent.com/pyxpo/pyxpo-dot-env/main/docs/images/hero.png" width="820" alt="The pyxpo-dot-env demo app: a staging build on Android and a production build on iOS, each with its own API URL, retries, feature flag and locales">
 </p>
 
 ```sh
@@ -175,7 +175,7 @@ name and signing certificate (Android) or bundle ID (iOS), and to the APIs it ne
 security. Set spending limits.
 
 For values that belong to one user (login tokens, refresh tokens), use
-[pyxpo-secure-store](https://github.com/pyxpo/pyxpo/tree/main/packages/secure-store), which keeps them in the iOS
+[pyxpo-secure-store](https://github.com/pyxpo/pyxpo-secure-store), which keeps them in the iOS
 Keychain and the Android Keystore. `.env` files are for the app's own settings, which are the same for every user.
 
 > **Tip:** to make sure only your real app can call your backend, add Play Integrity (Android) and App Attest (iOS)
@@ -274,7 +274,7 @@ env.to_dict()                     # {"PYXPO_PUBLIC_API_URL": "...", ...}
   `os.environ` either.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/pyxpo/pyxpo/main/packages/dot-env/docs/images/typed.png" width="720" alt="Typed values in the demo app on Android and iOS, and a build-only token that does not reach the app">
+  <img src="https://raw.githubusercontent.com/pyxpo/pyxpo-dot-env/main/docs/images/typed.png" width="720" alt="Typed values in the demo app on Android and iOS, and a build-only token that does not reach the app">
 </p>
 
 ## Schema
@@ -342,7 +342,7 @@ An unknown option is an error, so a misspelled option does not get ignored witho
 Every build checks each public value and name before anything is shipped. A hit stops the build:
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/pyxpo/pyxpo/main/packages/dot-env/docs/images/leak-guard.png" width="820" alt="python -m pyxpo_dot_env check stopping on a Stripe secret key, an OpenAI key and a password in public variables, with the values masked">
+  <img src="https://raw.githubusercontent.com/pyxpo/pyxpo-dot-env/main/docs/images/leak-guard.png" width="820" alt="python -m pyxpo_dot_env check stopping on a Stripe secret key, an OpenAI key and a password in public variables, with the values masked">
 </p>
 
 | It stops on | Looks like |
@@ -434,7 +434,7 @@ Run these in the project folder (or pass `--dir path/to/app`). Each one takes `-
 | `python -m pyxpo_dot_env init` | Creates `.env` and `.env.example`, and adds `.env*.local` and `.env.keys` to `.gitignore`. |
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/pyxpo/pyxpo/main/packages/dot-env/docs/images/show.png" width="820" alt="python -m pyxpo_dot_env show --mode staging listing each variable, whether it ships, its source file and its value">
+  <img src="https://raw.githubusercontent.com/pyxpo/pyxpo-dot-env/main/docs/images/show.png" width="820" alt="python -m pyxpo_dot_env show --mode staging listing each variable, whether it ships, its source file and its value">
 </p>
 
 ## CI and the environment
@@ -650,7 +650,7 @@ Yes, those keys are made to be in apps. Restrict them in the Google Cloud consol
 needs) so a copied key is useless elsewhere.
 
 **Where do I keep a user's login token?**
-In [pyxpo-secure-store](https://github.com/pyxpo/pyxpo/tree/main/packages/secure-store), not in `.env`. `.env`
+In [pyxpo-secure-store](https://github.com/pyxpo/pyxpo-secure-store), not in `.env`. `.env`
 values are the same for every user and are set when you build.
 
 **Can I change a value without a new build?**
